@@ -1,0 +1,20 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=MemCacheDManager.chm
+Contents file=MemCacheDManager.hhc
+Default topic=Welcome.htm
+Display compile progress=No
+Language=0x409 English (United States)
+
+
+[FILES]
+Welcome.htm
+CreateNewInstance.htm
+CreateNewServer.htm
+Icons.htm
+License.htm
+Upgrading.htm
+VersionHistory.htm
+
+[INFOTYPES]
+

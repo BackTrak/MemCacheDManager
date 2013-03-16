@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<h3>
+		Manage Configurations for Multiple Environments</h3>
+		<p>
+			MemCacheD manager supports using xml configuration files for the servers running
+			MemCacheD in your environment. This allows you to have separate configuration files
+			for your development, staging and production environments. This also allows you
+			to share configuration files between workstations, or to place configuration files
+			on a share for multiple administrators to use. At this time, MemCacheD Manager does
+			not handle file concurrency on the configuration file, so you will need to reload
+			it if another user changes it.
+		</p>
+		<p>
+			When you first start MemCacheD Manager, it will create a blank configuration file
+			for you called Default.xml. This file will reside in the same directory as MemCacheD
+			Manager. MemCacheD Manager will always load the last configuration file that you
+			were working with when you start it. If you wish to create a new configuration file,
+			simply select <em>File-&gt;New Configuration</em> from the main menu. You will then
+			be presented with an empty MemCacheD Manager main window, and you then can work
+			with MemCacheD Manager. Saves to the configuration file are done as soon as you
+			click Apply on all screens.
+		</p>
+	</body>
+</html>

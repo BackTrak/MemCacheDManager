@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB2B6785-7E27-4480-B1B1-9FB1FFDF14C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MemCacheDManager</RootNamespace>
+    <AssemblyName>MemCacheDManager</AssemblyName>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\DataTableConverter\ConversionAttribute.cs" />
+    <Compile Include="Business\DataTableConverter\DataTableConverter.cs" />
+    <Compile Include="Business\DataTableConverter\IDataTableConverter.cs" />
+    <Compile Include="Business\EditableEntityBase.cs" />
+    <Compile Include="Business\Instance.cs" />
+    <Compile Include="Business\InstanceMonitor.cs" />
+    <Compile Include="Business\InstanceStatistics.cs" />
+    <Compile Include="Business\Server.cs" />
+    <Compile Include="Business\ServerCollection.cs" />
+    <Compile Include="Configuration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Configuration.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="ImpersonateUser.cs" />
+    <Compile Include="Business\StatusIconIndex.cs" />
+    <Compile Include="UI\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CodeGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CodeGeneration.Designer.cs">
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\InstanceDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\InstanceDetails.Designer.cs">
+      <DependentUpon>InstanceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemcachedParameter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CodeGeneration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\InstanceDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InstanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ServerDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Configuration.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Configuration.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\UserControls\ServerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ServerDetails.Designer.cs">
+      <DependentUpon>ServerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceUtility.cs" />
+    <Compile Include="UI\UserControls\ISupportEntityEditing.cs">
+    </Compile>
+    <Compile Include="UI\UserControls\UserControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WmiFile.cs" />
+    <Compile Include="WmiHelper.cs" />
+    <Compile Include="WmiService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="BinaryFiles\memcached.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BinaryFiles\msvcr71.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Help\Configurations.htm" />
+    <Content Include="Help\CreateNewInstance.htm" />
+    <Content Include="Help\CreateNewServer.htm" />
+    <Content Include="Help\Icons.htm" />
+    <Content Include="Help\Images\accept.png" />
+    <Content Include="Help\Images\CreateNewInstance10.JPG" />
+    <Content Include="Help\Images\CreateNewInstance20.JPG" />
+    <Content Include="Help\Images\CreateNewServer10.JPG" />
+    <Content Include="Help\Images\CreateNewServer20.JPG" />
+    <Content Include="Help\Images\error.png" />
+    <Content Include="Help\Images\exclamation.png" />
+    <Content Include="Help\Images\link_error.png" />
+    <Content Include="Help\Images\picture_empty.png" />
+    <Content Include="Help\Images\stop.png" />
+    <Content Include="Help\Images\Upgrading10.JPG" />
+    <Content Include="Help\Images\Upgrading20.JPG" />
+    <Content Include="Help\Images\Upgrading30.JPG" />
+    <Content Include="Help\License.htm" />
+    <Content Include="Help\Upgrading.htm" />
+    <Content Include="Help\VersionHistory.htm" />
+    <Content Include="Help\Welcome.htm" />
+    <Content Include="Imports\Enyim.Caching.dll" />
+    <None Include="Help\MemCacheDManager.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Help\MemCacheDManager.hhc" />
+    <None Include="Help\MemCacheDManager.hhp" />
+    <Compile Include="NetworkDrive.cs" />
+    <Compile Include="NetworkHelper.cs" />
+    <Compile Include="ServerConfiguration.cs" />
+    <None Include="Resources\icnCommunicationError.ico" />
+    <None Include="Resources\icnServiceDown.ico" />
+    <None Include="Resources\icnEmpty.ico" />
+    <None Include="Resources\icnUp.ico" />
+    <None Include="Resources\icnDown.ico" />
+    <None Include="Resources\icnNeedsUpdate.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Enyim.Caching\Enyim.Caching.csproj">
+      <Project>{D438C0B3-A168-40B8-BDDD-61F0939DFF35}</Project>
+      <Name>Enyim.Caching</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
